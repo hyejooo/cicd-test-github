@@ -1,4 +1,4 @@
-@Library('test2')_
+@Library('commons')_
 
 pipeline {
     agent any
