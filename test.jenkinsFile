@@ -1,6 +1,4 @@
-def printNetwork() {
-    println "hello world"
-}
+@Library('test2')_
 
 pipeline {
     agent any
@@ -17,7 +15,7 @@ pipeline {
         stage("#1. Deploy(time & safety)") {
             steps {
                 script {
-                    sh "pwd"
+                    _printNetwork
                 }
             }
         }
