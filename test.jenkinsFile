@@ -1,0 +1,32 @@
+def printNetwork() {
+    println "hello world"
+}
+
+pipeline {
+    agent any
+
+    stages {
+        stage("#0. Config") {
+            steps {
+                script {
+                    println "NETWORK_DATE=${NETWORK_DATE}, EXPORTER_VERSION=${EXPORTER_VERSION}"
+                }
+            }
+        }
+
+        stage("#1. Deploy(time & safety)") {
+            steps {
+                script {
+                    sh "pwd"
+                }
+            }
+        }
+        stage("#2. Deploy(safety-resource)") {
+            steps {
+                script {
+                    sh "pwd"
+                }
+            }
+        }
+    }
+}

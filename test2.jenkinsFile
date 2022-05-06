@@ -1,0 +1,15 @@
+@Library('test')_
+
+pipeline {
+    agent any
+
+    stages {
+        stage("#0. Config") {
+            steps {
+                script {
+                    printNetwork
+                }
+            }
+        }
+    }
+}
