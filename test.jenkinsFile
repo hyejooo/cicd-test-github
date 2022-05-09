@@ -1,4 +1,4 @@
-@Library('commons')_
+@Library("commons") _
 
 pipeline {
     agent any
@@ -15,7 +15,7 @@ pipeline {
         stage("#1. Deploy(time & safety)") {
             steps {
                 script {
-                    _printNetwork
+                    git.printNetwork(NETWORK_DATE, EXPORTER_VERSION)
                 }
             }
         }
